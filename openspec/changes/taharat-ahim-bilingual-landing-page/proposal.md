@@ -7,6 +7,7 @@ Meta needs a publicly accessible page that helps verify Taharat Ahim Bot as a le
 - Add a responsive, publicly accessible landing page for Taharat Ahim Bot, hosted from this GitHub Pages repository.
 - Present the affiliation as “A project of Shevet Ahim” / “Un proyecto de Shevet Ahim,” with a link to the organization's official website.
 - Provide equivalent English and Spanish descriptions of the bot's two user-facing services: routing halakhic questions to rabbis, and coordinating drop-off/pickup of fabrics or garments for family-purity review.
+- Provide an optional, configurable public WhatsApp number with a direct chat link in both languages; keep the contact call-to-action hidden until a valid number is configured.
 - Explain the service flow and provide appropriate organization/contact and privacy information without making unverified promises about response times, confidentiality, or religious outcomes.
 - Support an obvious way to switch between English and Spanish.
 

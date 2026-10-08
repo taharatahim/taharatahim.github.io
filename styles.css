@@ -224,6 +224,47 @@ h2 em {
   transform: translateY(3px);
 }
 
+.whatsapp-link {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 10px 15px 10px 10px;
+  border: 1px solid rgba(35, 77, 72, 0.24);
+  border-radius: 3px;
+  color: var(--green);
+  font-size: 11px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.whatsapp-link:hover {
+  border-color: var(--green);
+  background: rgba(35, 77, 72, 0.045);
+}
+
+.whatsapp-icon {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  font-size: 15px;
+}
+
+.whatsapp-link strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .hero-art {
   position: relative;
   width: min(100%, 480px);

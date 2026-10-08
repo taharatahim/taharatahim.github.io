@@ -5,6 +5,8 @@ const pageTitle = document.querySelector("title");
 const description = document.querySelector('meta[name="description"]');
 const socialTitle = document.querySelector('meta[property="og:title"]');
 const socialDescription = document.querySelector('meta[property="og:description"]');
+const whatsappContact = document.querySelector("[data-whatsapp-contact]");
+const whatsappNumber = document.querySelector("[data-whatsapp-number]");
 
 const metadata = {
   en: {
@@ -24,6 +26,15 @@ const metadata = {
       "Un servicio comunitario para consultas sobre pureza familiar y revisión de telas o prendas, coordinado por WhatsApp.",
   },
 };
+
+function configureWhatsAppContact() {
+  const number = window.TAHARAT_AHIM_CONFIG?.whatsappNumber;
+  if (typeof number !== "string" || !/^\d{8,15}$/.test(number)) return;
+
+  whatsappNumber.textContent = `+${number}`;
+  whatsappContact.href = `https://wa.me/${number}`;
+  whatsappContact.hidden = false;
+}
 
 function setLanguage(language) {
   const selectedLanguage = language === "es" ? "es" : "en";
@@ -56,6 +67,8 @@ function setLanguage(language) {
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
+
+configureWhatsAppContact();
 
 try {
   const savedLanguage = window.sessionStorage.getItem("taharat-ahim-language");

@@ -28,3 +28,14 @@ The landing page SHALL remain readable and usable on mobile and desktop viewport
 #### Scenario: Visitor navigates without a pointer
 - **WHEN** a visitor uses keyboard navigation or assistive technology
 - **THEN** the language control and external links have discernible names and can be reached and operated
+
+### Requirement: Optional configured WhatsApp contact
+The landing page SHALL support an optional public WhatsApp contact number configured separately from page markup in digits-only international format. When the configured value is valid, the page SHALL display the number and a direct `wa.me` contact link with equivalent English and Spanish labels. When the value is absent or invalid, the page SHALL hide the WhatsApp contact call-to-action and SHALL NOT display or link to an invalid number.
+
+#### Scenario: Valid public number is configured
+- **WHEN** a valid digits-only international WhatsApp number is present in the public site configuration
+- **THEN** the page displays that number and provides a working direct WhatsApp link with language-appropriate contact text
+
+#### Scenario: Number is not configured or invalid
+- **WHEN** the configuration has no number or contains a value outside the supported international digits-only format
+- **THEN** the WhatsApp contact call-to-action remains hidden and no invalid WhatsApp link is offered

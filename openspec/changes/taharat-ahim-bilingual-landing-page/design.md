@@ -30,6 +30,12 @@ Present English and Spanish as equivalent versions in one page, with a visible, 
 
 Alternative considered: separate language URLs. These can help with search indexing, but introduce duplicated pages and routing complexity; a single page is adequate for this scope.
 
+### Optional WhatsApp contact uses a separate public config file
+
+Store the optional public WhatsApp contact number as digits-only international format in a small `config.js` file, loaded before the site's main script and included in the GitHub Pages artifact. Keep the default value empty. The page validates the value before constructing a `wa.me` URL, displays the number and bilingual chat link only when valid, and remains usable without it. The number is public website content, not a secret; do not place credentials or API tokens in this file.
+
+Alternative considered: replace a placeholder directly in the HTML or add a build-time secret. Editing one configuration value without changing markup, without adding a build system, and without pretending the public number is secret best fits this static site.
+
 ### Organization affiliation and factual service copy
 
 Use “A project of Shevet Ahim” / “Un proyecto de Shevet Ahim” and link directly to the official community site. Explain that rabbis receive and answer halakhic questions, while the bot helps coordinate the submission and pickup of fabrics or garments for review related to family purity. Do not imply the bot itself provides religious rulings.
@@ -46,6 +52,7 @@ Do not invent data-handling practices, confidentiality guarantees, response time
 - **[Risk] “Sobre” or “family purity” may be unclear to English-speaking visitors** → Explicitly say fabrics or garments are submitted for review related to family purity; avoid unexplained local shorthand.
 - **[Risk] Bilingual copy drifts in meaning** → Treat translations as equivalent content and review both language versions together when changing service descriptions.
 - **[Risk] GitHub Pages publication settings may not be configured** → Verify the repository's Pages source and public URL during implementation/deployment.
+- **[Risk] An invalid or private number could be published as the public contact** → Keep configuration empty by default, validate the international digits-only format, and document that only the approved public business number belongs there.
 - **[Trade-off] Single-page language switching offers less URL-level language indexing** → Prefer the simplest maintainable site for this narrowly scoped trust/identity purpose.
 
 ## Migration Plan
@@ -55,6 +62,5 @@ There is no existing site to migrate. Add the static site and configure GitHub P
 ## Open Questions
 
 - Which exact privacy notice or approved privacy wording should be linked/published, and what practices can it accurately describe?
-- Is there a preferred public contact page or email at Shevet Ahim to use, beyond linking to its main website?
 - Should the site use the Shevet Ahim logo, and is its use approved for this project?
 - Should the English term remain “family purity,” or does the organization prefer another established translation?
