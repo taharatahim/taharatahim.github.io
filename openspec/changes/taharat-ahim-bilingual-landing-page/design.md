@@ -1,6 +1,6 @@
 ## Context
 
-The `taharat-ahim.github.io` repository is empty and is dedicated to the public landing page; the bot implementation lives in a separate repository. The page exists primarily to establish a clear public identity for Taharat Ahim Bot during Meta's WhatsApp number review and to explain that it is a project of Shevet Ahim. It must serve visitors in both English and Spanish and accurately describe two workflows: halakhic questions are routed to rabbis, and coordination is provided for fabrics or garments submitted for family-purity review.
+The `taharatahim.github.io` repository is dedicated to the public landing page; the bot implementation lives in a separate repository. The page exists primarily to establish a clear public identity for Taharat Ahim Bot during Meta's WhatsApp number review and to explain that it is a project of Shevet Ahim. It must serve visitors in both English and Spanish and accurately describe two workflows: halakhic questions are routed to rabbis, and coordination is provided for fabrics or garments submitted for family-purity review.
 
 ## Goals / Non-Goals
 

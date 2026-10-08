@@ -15,4 +15,4 @@
 
 - [x] 3.1 Verify responsive layout, keyboard navigation, discernible link/control labels, and language switching in both languages.
 - [x] 3.2 Review English and Spanish copy for equivalent meaning and factual accuracy; confirm any privacy or contact copy with the organization before publication.
-- [ ] 3.3 Verify the GitHub Pages public URL and confirm the landing page and Shevet Ahim link load successfully. **Blocked:** GitHub Pages is not currently published (the expected URL returned HTTP 404); enable the repository's Pages source as GitHub Actions and verify after deployment.
+- [x] 3.3 Verify the GitHub Pages public URL and confirm the landing page and Shevet Ahim link load successfully: https://taharatahim.github.io/.
