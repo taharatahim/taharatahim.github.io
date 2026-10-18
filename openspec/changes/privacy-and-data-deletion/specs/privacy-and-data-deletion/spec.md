@@ -22,6 +22,13 @@ The page SHALL state that the project cannot control or delete WhatsApp messages
 - **WHEN** a visitor reads the notice about deletion limits
 - **THEN** the visitor is told that delivered messages and external copies are not deleted or controlled by the project
 
+### Requirement: Public privacy page describes information and authorized access groups
+The page SHALL describe the categories of information handled by the bot, identify WhatsApp and AWS as service providers for messaging, hosting, database, and operational logs, and state that information may be accessed by the technical team responsible for maintaining the bot and Taharat Ahim team members according to their assigned permissions and roles.
+
+#### Scenario: Visitor asks what information is handled and who can access it
+- **WHEN** a visitor reads the privacy page
+- **THEN** the visitor can identify the information categories, service-provider roles, technical maintenance team, and role-authorized Taharat Ahim team members
+
 ### Requirement: Public privacy page accurately describes application logs
 The page SHALL state that application logs omit message content, show only the last four digits of phone numbers when needed operationally, and are retained for 30 days. It SHALL NOT claim that a database deletion synchronously erases historical logs or makes masked identifiers fully anonymous.
 
